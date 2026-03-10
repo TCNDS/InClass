@@ -1,0 +1,32 @@
+<h1>Directives</h1>
+<p>Component</p>
+<p>Structral directives: ngIf, ngFor, ngSwitch</p>
+<p>Attribute directives: ngStyle, ngClass</p>
+<h4>NgIf similar to adding display: none when condition is false</h4>
+<div *ngIf="condition">
+    This part is conditionally rendered.
+</div>
+
+@if(condition) {
+    <div>This is the new syntax.</div>
+}
+<h4>NgFor</h4>
+<div *ngIf="arr.length">
+    <h3>user list</h3>
+    <div *ngFor="let person of arr" [appHighlight]="textColor">
+    {{person.name}} - {{person.email}}
+    </div>
+</div>
+
+@for(person of arr; track $index){
+    <p>{{person.name}}</p>
+}
+<h4>ngSwitch</h4>
+<div [ngSwitch]="role">
+    <p *ngSwitchCase="'admin'">Admin Panel</p>
+    <p *ngSwitchCase="'user'">User Dashboard</p>
+</div>
+
+<h3 [ngStyle]="textColor=='red' ? {color: textColor} : {color: 'blue'}"
+[ngClass]="textColor=='red' ? blue : yellow">
+    Attribute Directive</h3>
