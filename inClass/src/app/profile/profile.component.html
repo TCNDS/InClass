@@ -1,21 +1,25 @@
 <!-- <p>profile works!</p> -->
 <h1>This is User's Profile</h1>
-<h1>Welcome, {{ name }}!</h1>
+<h1>Welcome, {{ name.value }}!</h1>
+
 
 <p> Name: 
-    <input [(ngModel)]="name" >
-    <button (click)="restName()" [disabled]="!name">Rest</button>
-    <button (click)="saveName()" [disabled]="!name">Save</button>
+    <!-- <input [(ngModel)]="name" > -->
+    <!-- <button (click)="restName()" [disabled]="!name">Rest</button>
+    <button (click)="saveName()" [disabled]="!name">Save</button> -->
+    <input type="text" [formControl]="name">
 </p>
 <p> Email: 
-    <input [(ngModel)]="email">
-    <button (click)="restEmail()" [disabled]="!email">Rest</button>
-    <button (click)="saveEmail()" [disabled]="!email">Save</button>
+    <!-- <input [(ngModel)]="email"> -->
+    <!-- <button (click)="restEmail()" [disabled]="!email">Rest</button>
+    <button (click)="saveEmail()" [disabled]="!email">Save</button> -->
+    <input type="text" [formControl]="email">
 </p>
 <p> Date Of Birth: 
-    <input [(ngModel)]="DoB"> 
-    <button (click)="restDob()" [disabled]="!DoB">Rest</button>
-    <button (click)="saveDob()" [disabled]="!DoB">Save</button>
+    <!-- <input [(ngModel)]="DoB">  -->
+    <!-- <button (click)="restDob()" [disabled]="!DoB">Rest</button>
+    <button (click)="saveDob()" [disabled]="!DoB">Save</button> -->
+    <input type="text" [formControl]="DoB">
 </p>
 
 <hr>
@@ -28,6 +32,6 @@
 <hr>
 
 <h3>Profile Preview (Read-Only)</h3>
-<p>Name: {{ name }}</p>
-<p>Email: {{ email }}</p>
-<p>DOB: {{ DoB }}</p>
+<p>Name: {{ name.value }}</p>
+<p>Email: {{ email.value }}</p>
+<p>DOB: {{ DoB.value }}</p>
