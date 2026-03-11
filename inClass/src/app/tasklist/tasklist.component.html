@@ -1,0 +1,48 @@
+<!-- <p>tasklist works!</p> -->
+<h1>This is the tasklist</h1>
+<div *ngIf="TASKS.length === 0">
+  <p><strong>No tasks available.</strong></p>
+</div>
+<ul *ngIf="TASKS.length !== 0">
+    <li *ngFor="let item of TASKS">
+        <div [ngClass]="todayDate > item.dueDate ? 'is-overdue' : ''">
+            <strong>{{item.title}}</strong>
+            <div [appOverflow]="item.description">{{item.description}}</div>
+        </div>
+        
+
+        <label>Status: </label>
+        <select [(ngModel)]="item.status">
+            <option value="Incomplete">Incomplete</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+        </select>
+
+    </li>
+</ul>
+<hr>
+<div class="add-task-container">
+  <h3>Add New Tasks</h3>
+    <p>
+        <input type="text" [(ngModel)]="newTitle" placeholder="Title"/>
+    </p>
+    <p>
+        <input [(ngModel)]="newDesc" placeholder="Description">
+    </p>
+  
+    <div>
+        <label>Due Date: </label>
+        <input type="date" [(ngModel)]="newDueDate" />
+    </div>
+
+    <div>
+        <label>Priority: </label>
+        <select [(ngModel)]="newPriority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+    </div>
+
+    <button (click)="addTask()" [disabled]="!newTitle">Add Task</button>
+</div>

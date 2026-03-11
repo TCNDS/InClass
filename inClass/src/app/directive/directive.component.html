@@ -1,0 +1,47 @@
+<p>directive works!</p>
+<hr>
+<h1>Dirctives And Pipes</h1>
+<h3>Dirctives</h3>
+<p>Components are dirctives with template</p>
+<ul>
+    <li> Component Dirctives</li>
+    <li> Structural Directive -- ngIf, ngFor, ngSwitch</li>
+    <li> Attribute  Directive -- ngClass, ngStyle, ngModel</li>
+    <br>
+    <li> Custom Directive </li>
+</ul>
+
+<p>Example: ngIf and ngFor</p>
+<hr>
+<div *ngIf="emptyArr">  
+    <!-- Any thing in " " is the expression -->
+    <!-- so it can be a condition -->
+    <!-- expression check the reference of  -->
+    <div>display ngIf</div>
+</div> 
+
+@if (10>2) {
+    <div>This is True</div>
+}
+<hr>
+<div *ngFor="let item of infoArr ; let i = index" [appHighlight] = "textColor" >
+    <p>{{i}}. {{item.name}} + {{item.phone}}</p>
+</div>
+
+@for (item of infoArr; track $index) {
+    
+}
+<hr class="hr">
+<p>ngSwitch</p>
+<div [ngSwitch]=""></div>
+<hr>
+<div [ngStyle]="textColor == 'red' ? {color:'red'} : {color:'blue'}"
+[ngClass]="'colorful'"> 
+    Hello
+    {{title}}
+</div>
+<p>They are the same in console</p>
+<div style="color: red;">
+    Hello
+    {{title}}
+</div>
