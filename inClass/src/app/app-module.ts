@@ -11,6 +11,7 @@ import { PipeIntro } from './pipe-intro/pipe-intro';
 import { MyFirstPipe } from './pipe-intro/my-first-pipe';
 import { Parent } from './dataCommunication/parent/parent';
 import { Child } from './dataCommunication/child/child';
+import { Lifecycle } from './lifecycle/lifecycle';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { Child } from './dataCommunication/child/child';
     MyFirstPipe,
     Parent,
     Child,
+    // Lifecycle,
     
   ],
   imports: [
