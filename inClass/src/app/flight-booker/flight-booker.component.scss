@@ -1,0 +1,22 @@
+.flight-container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+select,
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+button {
+  background: #f9a825;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}

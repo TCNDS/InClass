@@ -1,0 +1,26 @@
+<!-- <p>person-info works!</p> -->
+<div class="wrapper">
+  <div class="left-panel">
+    <h1 class="title" [ngStyle]="{'color': titleColor}">List</h1>
+
+    <div
+      *ngFor="let item of data"
+      class="card"
+      (click)="showDescription(item)"
+      [ngStyle]="{
+        'border-left': (clickitem === item ? '12px' : '6px') + ' solid ' + item.color
+      }"
+    >
+      <h3>{{ item.name }}</h3>
+      <p>{{ item.description | overflowDesciption }}</p>
+    </div>
+  </div>
+
+  <div class="right-panel">
+    <app-display-description
+      *ngIf="clickitem"
+      [msg]="clickitem"
+      (saveClicked)="changeTitleColor()">
+    </app-display-description>
+  </div>
+</div>

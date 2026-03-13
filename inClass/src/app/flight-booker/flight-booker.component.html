@@ -1,0 +1,22 @@
+<!-- <p>flight-booker works!</p> -->
+<div class="flight-container">
+
+  <select [(ngModel)]="flightType">
+
+    <option value="oneway">One-way flight</option>
+    <option value="return">Return flight</option>
+
+  </select>
+
+  <input
+    type="date"
+    [(ngModel)]="departureDate">
+
+  <input
+    *ngIf="flightType === 'return'"
+    type="date"
+    [(ngModel)]="returnDate">
+
+  <button (click)="bookFlight()">Book</button>
+
+</div>
