@@ -17,6 +17,8 @@ import { PersonInfoComponent } from './person-info/person-info.component';
 import { OverflowDesciptionPipe } from './person-info/overflow-desciption.pipe';
 import { DisplayDescriptionComponent } from './person-info/display-description/display-description.component';
 import { FlightBookerComponent } from './flight-booker/flight-booker.component';
+import { RoutingComponent } from './routing/routing.component';
+import { FormsIntoComponent } from './forms-into/forms-into.component';
 
 
 
@@ -35,7 +37,9 @@ import { FlightBookerComponent } from './flight-booker/flight-booker.component';
     PersonInfoComponent,
     OverflowDesciptionPipe,
     DisplayDescriptionComponent,
-    FlightBookerComponent
+    FlightBookerComponent,
+    RoutingComponent,
+    FormsIntoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,72 @@
+<!-- <p>forms-into works!</p> -->
+<!-- <input type="text" [formControl] = "username" > -->
+<h2>Register <Form></Form></h2>
+<!-- <form action="" [formGroup]="registerForm">
+    <input type="text" formControlName = "user" >
+    <input type="text" formControlName = "email" >
+</form> -->
+
+<form action="" [formGroup]="registerForm">
+  <label for="">Username</label>
+  <input type="text" formControlName="username" />
+  <div *ngIf="username?.errors?.['required'] && username?.touched">
+    Username is required.
+  </div>
+  <div *ngIf="username?.errors?.['minlength'] && username?.touched">
+    Username must be at least 3 characters
+  </div>
+  <br />
+  <label>Preferred Contact Method</label>
+  <select formControlName="preferredContactMethod">
+    <option value="Email">Email</option>
+    <option value="Phone">Phone</option>
+  </select>
+  <br />
+  <label for="">Email</label>
+  <input type="email" formControlName="email" />
+  <div
+    *ngIf="
+      registerForm.errors?.['contactRequired'] &&
+      preferredContactMethod?.value === 'Email' &&
+      email?.touched
+    "
+  >
+    Email is required.
+  </div>
+  <div *ngIf="email?.errors?.['email'] && email?.touched">
+    Please enter a valid email address.
+  </div>
+  <br />
+  <label for="phoneNumber">Phone Number</label>
+  <input type="text" formControlName="phoneNumber" />
+  <div
+    *ngIf="
+      registerForm.errors?.['contactRequired'] &&
+      preferredContactMethod?.value === 'Phone' &&
+      phoneNumber?.touched
+    "
+  >
+    Please provide at least one contact method.
+  </div>
+  <br />
+  <label for="">Password</label>
+  <input type="password" formControlName="password" />
+  <div *ngIf="password?.errors?.['required'] && password?.touched">
+    Password is required.
+  </div>
+  <div *ngIf="password?.errors?.['minlength'] && password?.touched">
+    Password must be at least 6 characters.
+  </div>
+  <br />
+  <label for="confirmPassword">Confirm Password</label>
+  <input type="password" formControlName="confirmPassword" />
+  <div
+    *ngIf="
+      registerForm.errors?.['passwordMismatch'] && confirmPassword?.touched
+    "
+  >
+    Passwords do not match.
+  </div>
+</form>
+
+<button (click)="submit()" [disabled]="registerForm.invalid">Submit</button>
