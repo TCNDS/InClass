@@ -12,6 +12,7 @@ import { MyFirstPipe } from './pipe-intro/my-first-pipe';
 import { Parent } from './dataCommunication/parent/parent';
 import { Child } from './dataCommunication/child/child';
 import { Lifecycle } from './lifecycle/lifecycle';
+import { FormsIntroComponent } from './forms-intro-component/forms-intro-component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { Lifecycle } from './lifecycle/lifecycle';
     MyFirstPipe,
     Parent,
     Child,
+    FormsIntroComponent,
     // Lifecycle,
     
   ],
