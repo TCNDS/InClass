@@ -13,6 +13,8 @@ import { Parent } from './dataCommunication/parent/parent';
 import { Child } from './dataCommunication/child/child';
 import { Lifecycle } from './lifecycle/lifecycle';
 import { FormsIntroComponent } from './forms-intro-component/forms-intro-component';
+import { HttpIntro } from './http-intro/http-intro';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { FormsIntroComponent } from './forms-intro-component/forms-intro-compone
     Parent,
     Child,
     FormsIntroComponent,
+    HttpIntro,
     // Lifecycle,
     
   ],
@@ -32,7 +35,8 @@ import { FormsIntroComponent } from './forms-intro-component/forms-intro-compone
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MyFirstModule
+    MyFirstModule,
+    HttpClientModule 
   ],
   providers: [
     provideBrowserGlobalErrorListeners()
