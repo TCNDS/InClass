@@ -1,0 +1,15 @@
+<button (click)="getTodos()">Get data</button>
+<!-- template reference -->
+<button #btn>Emit data</button>
+<h4>Async pipe in template</h4>
+<ul *ngIf="todoObs">
+    <li *ngFor="let todo of (todoObs | async)">{{todo.title}}</li>
+</ul>
+
+<h4>Local Variable in Component</h4>
+<p *ngIf="!todoList.length">Loading...</p>
+<ul *ngIf="todoList.length">
+    <li *ngFor="let todo of todoList">
+        {{todo.title}}
+    </li>
+</ul>
