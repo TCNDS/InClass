@@ -19,6 +19,11 @@ import { DisplayDescriptionComponent } from './person-info/display-description/d
 import { FlightBookerComponent } from './flight-booker/flight-booker.component';
 import { RoutingComponent } from './routing/routing.component';
 import { FormsIntoComponent } from './forms-into/forms-into.component';
+import { ObservableOperatorsComponent } from './observable-operators/observable-operators.component';
+import { ModifierComponent } from './observable-operators/modifier/modifier.component';
+import { ReceiverComponent } from './observable-operators/receiver/receiver.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductsComponent } from './products/products.component';
 
 
 
@@ -39,13 +44,18 @@ import { FormsIntoComponent } from './forms-into/forms-into.component';
     DisplayDescriptionComponent,
     FlightBookerComponent,
     RoutingComponent,
-    FormsIntoComponent
+    FormsIntoComponent,
+    ObservableOperatorsComponent,
+    ModifierComponent,
+    ReceiverComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

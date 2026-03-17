@@ -1,0 +1,21 @@
+<!-- <p>products works!</p> -->
+
+<div class="container">
+  <h2>Product Management</h2>
+
+  <div *ngIf="errorMessage">
+    {{ errorMessage }}
+  </div>
+
+  <div>
+    <div *ngFor="let product of products">
+      <h3>{{ product.title }}</h3>
+      <p>Description: {{ product.description }}</p>
+      <p>Category: {{ product.category }}</p>
+    </div>
+  </div>
+
+  <button (click)="addNewProduct()">
+    + Add New Product
+  </button>
+</div>
