@@ -1,0 +1,11 @@
+<!-- <p>user works!</p> -->
+<h2>User Info</h2>
+<div *ngIf="users.length === 0">No User loaded yet.</div>
+<ul *ngIf="users.length > 0">
+    <li *ngFor="let user of users">
+        {{ user.id }} - {{ user.name }}
+        <button (click)="toggleFavorite(user)">
+            {{ isFavorite(user.id) ? "Remove Favorite" : "Add to Favorite" }}
+        </button>
+    </li>
+</ul>

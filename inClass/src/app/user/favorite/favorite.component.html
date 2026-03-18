@@ -1,0 +1,12 @@
+<!-- <p>favorite works!</p> -->
+<div *ngIf="favoriteUsers.length === 0">
+  No favorite users yet.
+</div>
+
+<div *ngFor="let user of favoriteUsers" class="favorite-card">
+  <p>ID: {{ user.id }}</p>
+  <p>Name: {{ user.name }}</p>
+  <p>Email: {{ user.email }}</p>
+
+  <button (click)="removeFavorite(user.id)">Remove</button>
+</div>
