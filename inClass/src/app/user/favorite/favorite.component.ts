@@ -13,7 +13,7 @@ export class FavoriteComponent {
   favoriteSub!: Subscription;
   constructor (private userService: UserService ) {}
   ngOnInit(): void {
-    this.favoriteSub = this.userService.favoriteUsers$.subscribe({
+    this.favoriteSub = this.userService.favoriteUsers$.pipe().subscribe({
       next: (data) => {
         this.favoriteUsers = data;
       },

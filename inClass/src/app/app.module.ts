@@ -24,6 +24,9 @@ import { ModifierComponent } from './observable-operators/modifier/modifier.comp
 import { ReceiverComponent } from './observable-operators/receiver/receiver.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './products/products.component';
+import { UserComponent } from './user/user.component';
+import { FavoriteComponent } from './user/favorite/favorite.component';
+import { StarWarSearchComponent } from './star-war-search/star-war-search.component';
 
 
 
@@ -49,6 +52,9 @@ import { ProductsComponent } from './products/products.component';
     ModifierComponent,
     ReceiverComponent,
     ProductsComponent,
+    UserComponent,
+    FavoriteComponent,
+    StarWarSearchComponent,
   ],
   imports: [
     BrowserModule,

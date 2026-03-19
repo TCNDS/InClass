@@ -1,0 +1,21 @@
+<!-- <p>star-war-search works!</p> -->
+<h2>Star Wars Search</h2>
+<input [formControl]="characterName" placeholder="Enter character name" />
+<button (click)="performSearch()">Search</button>
+
+<div *ngIf="films.length > 0">
+  <table>
+    <thead>
+      <tr>
+        <th>Film Name</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let film of films">
+        <td>{{ film.title }}</td>
+        <td>{{ film.release_date }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
