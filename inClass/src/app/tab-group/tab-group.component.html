@@ -1,0 +1,15 @@
+<!-- <p>tab-group works!</p> -->
+<div>
+  <button
+    *ngFor="let tab of getVisibleTabs()"
+    (click)="selectTab(tab)"
+    [class]="tab.active ? 'btn-active' : 'btn'"
+    [disabled]="tab.active"
+  >
+    {{ tab.title }}
+  </button>
+</div>
+
+<div class="view">
+  <ng-content></ng-content>
+</div>

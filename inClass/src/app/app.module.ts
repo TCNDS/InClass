@@ -27,6 +27,8 @@ import { ProductsComponent } from './products/products.component';
 import { UserComponent } from './user/user.component';
 import { FavoriteComponent } from './user/favorite/favorite.component';
 import { StarWarSearchComponent } from './star-war-search/star-war-search.component';
+import { TabGroupComponent } from './tab-group/tab-group.component';
+import { TabComponent } from './tab/tab.component';
 
 
 
@@ -55,6 +57,8 @@ import { StarWarSearchComponent } from './star-war-search/star-war-search.compon
     UserComponent,
     FavoriteComponent,
     StarWarSearchComponent,
+    TabGroupComponent,
+    TabComponent,
   ],
   imports: [
     BrowserModule,
