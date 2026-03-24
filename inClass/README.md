@@ -46,3 +46,9 @@ new ReplaySubject(bufferSize)
 # change Detection
 1. default: event, data update, observable emits
 2. onpush: user events, @Input
+
+# Unit Testing
+1. Behavior-driven, Test-driven
+2. Nested Components (Parent to child)
+3. Component with Service (DI)
+4. Service with HttpClient

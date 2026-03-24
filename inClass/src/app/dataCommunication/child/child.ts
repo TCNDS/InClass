@@ -9,7 +9,7 @@ import { from, interval } from 'rxjs';
   // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Child implements DoCheck, OnInit{
-  @Input() fromParent!:{name: string};
+  @Input() fromParent!: string;
   @Output() toParent = new EventEmitter();
   msg = 'message from child';
   count: number = 0;
