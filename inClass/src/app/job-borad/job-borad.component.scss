@@ -1,0 +1,47 @@
+.job-board {
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  
+}
+
+.job-item {
+  padding: 16px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.job-title {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.job-title a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+.job-title a:hover {
+  text-decoration: underline;
+}
+
+.job-meta {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 16px;
+  border: none;
+  background: #f26b1d;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

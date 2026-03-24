@@ -1,0 +1,33 @@
+<!-- <p>job-borad works!</p> -->
+<div class="job-board">
+  <h1>Hacker News Jobs Board</h1>
+
+  <div class="job-item" *ngFor="let job of jobs">
+    <h2 class="job-title">
+      <a
+        *ngIf="job.url; else plainTitle"
+        [href]="job.url"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ job.title }}
+      </a>
+
+      <ng-template #plainTitle>
+        {{ job.title }}
+      </ng-template>
+    </h2>
+
+    <p class="job-meta">
+      By {{ job.by }} · {{ formatTime(job.time) }}
+    </p>
+  </div>
+
+  <button
+    *ngIf="hasMoreJobs()"
+    (click)="loadMoreJobs()"
+    [disabled]="loading"
+  >
+    {{ loading ? 'Loading...' : 'Load more' }}
+  </button>
+</div>

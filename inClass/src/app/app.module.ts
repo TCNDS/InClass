@@ -29,6 +29,7 @@ import { FavoriteComponent } from './user/favorite/favorite.component';
 import { StarWarSearchComponent } from './star-war-search/star-war-search.component';
 import { TabGroupComponent } from './tab-group/tab-group.component';
 import { TabComponent } from './tab/tab.component';
+import { JobBoradComponent } from './job-borad/job-borad.component';
 
 
 
@@ -59,6 +60,7 @@ import { TabComponent } from './tab/tab.component';
     StarWarSearchComponent,
     TabGroupComponent,
     TabComponent,
+    JobBoradComponent,
   ],
   imports: [
     BrowserModule,
