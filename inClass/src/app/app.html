@@ -11,9 +11,20 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- <ng-container>
+    <button #btn>Stop emittin Data</button>
+</ng-container>
+<ng-template #myTemplate>
+    <p>This is a template content</p>
+</ng-template>
+<div [ngTemplateOutlet]="myTemplate"></div>
+<div *ngIf="showContent; else myTemplate">
+    <p>This content is only shown when conidition is true</p>
+</div> -->
+<app-parent></app-parent>
 <!-- <app-http-intro/> -->
-<app-subject-intro/>
-<app-second-component/>
+<!-- <app-subject-intro/>
+<app-second-component/> -->
 <!-- <app-pipe-intro>Hello from APP</app-pipe-intro>
 <app-parent></app-parent> -->
 <!-- <app-directives-intro></app-directives-intro> -->

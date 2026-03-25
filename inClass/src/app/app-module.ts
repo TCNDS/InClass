@@ -17,11 +17,11 @@ import { HttpIntro } from './http-intro/http-intro';
 import { HttpClientModule } from '@angular/common/http';
 import { SubjectIntro } from './subject-intro/subject-intro';
 import { SecondComponent } from './subject-intro/second-component/second-component';
+import { RoutingIntro } from './routing-intro/routing-intro';
 
 @NgModule({
   declarations: [
       App,
-      DirectivesIntro,
       Highlight,
       PipeIntro,
       MyFirstPipe,
@@ -39,9 +39,10 @@ import { SecondComponent } from './subject-intro/second-component/second-compone
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MyFirstModule,
-    HttpClientModule 
-  ],
+    // MyFirstModule,
+    HttpClientModule,
+    MyFirstModule
+],
   providers: [
     provideBrowserGlobalErrorListeners()
   ],
