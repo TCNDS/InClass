@@ -20,20 +20,20 @@ import { SecondComponent } from './subject-intro/second-component/second-compone
 
 @NgModule({
   declarations: [
-    App,
-    DirectivesIntro,
-    Highlight,
-    PipeIntro,
-    MyFirstPipe,
-    Parent,
-    Child,
-    FormsIntroComponent,
-    HttpIntro,
-    SubjectIntro,
-    SecondComponent,
-    // Lifecycle,
-    
-  ],
+      App,
+      DirectivesIntro,
+      Highlight,
+      PipeIntro,
+      MyFirstPipe,
+      Parent,
+      Child,
+      FormsIntroComponent,
+      HttpIntro,
+      SubjectIntro,
+      SecondComponent,
+      // Lifecycle,
+      
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
