@@ -21,61 +21,20 @@ limitations under the License.
     <mat-card class="fillings selection-card">
       <mat-card-title>Fillings</mat-card-title>
       <mat-card-content>  
-        <!-- TODO: #7. Create selectable controls with Angular Material -->
-        <ul>
-          <li>
-            <input type="checkbox" name="vegan" id="vegan"
-                   [(ngModel)]="fillings.bokchoy"
-                   [(ngModel)]="fillings.tofu">
-            <label for="tall">Vegan</label>
-            <ul>
-              <li>
-                <input type="checkbox" 
-                        id="bokchoy" 
-                        [(ngModel)]="fillings.bokchoy"
-                        name="bokchoy">
-                <label for="bokchoy">Bok Choy</label>
-              </li>
-              <li>
-                <input type="checkbox" 
-                        id="tofu" 
-                        [(ngModel)]="fillings.tofu"
-                        name="tofu">
-                <label for="tofu">Tofu & Shitake</label>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <input type="checkbox" 
-                   [(ngModel)]="fillings.chicken"
-                   [(ngModel)]="fillings.impossible"
-                   name="meat" id="meat">
-            <label for="meat">Meat</label>
-            <ul>
-              <li>
-                <input type="checkbox" 
-                        id="chicken" 
-                        [(ngModel)]="fillings.chicken"
-                        name="chicken">
-                <label for="chicken">Chicken</label>
-              </li>
-              <li>
-                <input type="checkbox" 
-                        id="impossible" 
-                        [(ngModel)]="fillings.impossible"
-                        name="impossible">
-                <label for="impossible">Impossible Meat</label>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <p>Vegan</p>
+        <mat-checkbox name="bokchoy" [(ngModel)]="fillings.bokchoy">Bok Choy</mat-checkbox>
+        <mat-checkbox name="tofu" [(ngModel)]="fillings.tofu">Tofu & Shitake</mat-checkbox>
+
+        <p>Meat</p>
+        <mat-checkbox name="chicken" [(ngModel)]="fillings.chicken">Chicken</mat-checkbox>
+        <mat-checkbox name="impossible" [(ngModel)]="fillings.impossible">Impossible Meat</mat-checkbox>
       </mat-card-content>
     </mat-card>
     <mat-card class="quantity selection-card">
-      <mat-card-title>Quantity</mat-card-title>
+      <mat-card-title id="quantity-label">Quantity</mat-card-title>
       <mat-card-content>
-        <!-- TODO: #8. Provide control labels with ARIA -->
         <mat-slider
+          aria-labelledby="quantity-label"
           color="primary"
           class="quantity-slider"
           [max]="13"
@@ -94,8 +53,7 @@ limitations under the License.
       </mat-card-content>
     </mat-card>
   </div>
-  <!-- TODO: #6. Use Semantic HTML (& Angular Material!) -->
-  <div (click)="fauxPurchase()" class="purchase-button">
-    <h3>Purchase</h3>
-  </div>
+  <button mat-raised-button type="button" (click)="fauxPurchase()" class="purchase-button">
+    <span>Purchase</span>
+  </button>
 </div>
