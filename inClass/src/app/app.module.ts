@@ -30,6 +30,10 @@ import { StarWarSearchComponent } from './star-war-search/star-war-search.compon
 import { TabGroupComponent } from './tab-group/tab-group.component';
 import { TabComponent } from './tab/tab.component';
 import { JobBoradComponent } from './job-borad/job-borad.component';
+import { CounterNgRxComponent } from './counter-ng-rx/counter-ng-rx.component';
+import { StoreModule } from '@ngrx/store';
+import { count } from 'rxjs';
+import { countReducer } from './counter-ng-rx/Store/reducer';
 
 
 
@@ -61,13 +65,18 @@ import { JobBoradComponent } from './job-borad/job-borad.component';
     TabGroupComponent,
     TabComponent,
     JobBoradComponent,
+    CounterNgRxComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
+    StoreModule.forRoot({counter: countReducer,
+      //user: userReducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
