@@ -8,12 +8,12 @@ describe('DirectivesIntro', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DirectivesIntro]
-    })
-    .compileComponents();
+      imports: [DirectivesIntro]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(DirectivesIntro);
     component = fixture.componentInstance;
+    fixture.detectChanges();
     await fixture.whenStable();
   });
 

@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MyFirstModule } from './my-first-module/my-first-module';
-import { DirectivesIntro } from './directives-intro/directives-intro';
 import { Highlight } from './directives-intro/highlight';
 import { PipeIntro } from './pipe-intro/pipe-intro';
 import { MyFirstPipe } from './pipe-intro/my-first-pipe';
@@ -18,34 +17,40 @@ import { HttpClientModule } from '@angular/common/http';
 import { SubjectIntro } from './subject-intro/subject-intro';
 import { SecondComponent } from './subject-intro/second-component/second-component';
 import { RoutingIntro } from './routing-intro/routing-intro';
+import { CounterNgRx } from './counter-ng-rx/counter-ng-rx';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './counter-ng-rx/Store/reducer';
 
 @NgModule({
   declarations: [
-      App,
-      Highlight,
-      PipeIntro,
-      MyFirstPipe,
-      Parent,
-      Child,
-      FormsIntroComponent,
-      HttpIntro,
-      SubjectIntro,
-      SecondComponent,
-      // Lifecycle,
-      
-    ],
+    App,
+    Highlight,
+    PipeIntro,
+    MyFirstPipe,
+    Parent,
+    Child,
+    FormsIntroComponent,
+    HttpIntro,
+    SubjectIntro,
+    SecondComponent,
+    RoutingIntro,
+    CounterNgRx,
+    Lifecycle,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    // MyFirstModule,
     HttpClientModule,
-    MyFirstModule
-],
-  providers: [
-    provideBrowserGlobalErrorListeners()
+    MyFirstModule,
+    StoreModule.forRoot({
+      counter: counterReducer,
+    }),
   ],
-  bootstrap: [App]
+  providers: [
+    provideBrowserGlobalErrorListeners(),
+  ],
+  bootstrap: [App],
 })
 export class AppModule { }
